@@ -21,11 +21,11 @@ const StyledHeader = styled.header`
   display: grid;
   height: 120px;
   grid-template-columns: auto 1fr;
-  padding: 15px 25px;
   justify-content: space-between;
 `;
 
 const Wordmark = styled.div`
+  padding: 15px 25px;
   h1 {
     font-family: 'Orbitron Black', 'Arial Black', sans-serif;
     font-size: 4rem;
@@ -54,8 +54,6 @@ const Wordmark = styled.div`
 const Flex = styled.div`
   display: flex;
 `;
-
-const Links = styled.div``;
 
 const Header = () => {
   return (
