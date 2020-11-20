@@ -13,6 +13,7 @@ const Meta = () => (
     <link rel="stylesheet" type="text/css" href="nprogress.css" />
 
     <link rel="preload" href="/fonts/Orbitron.ttf" as="font" crossOrigin="" />
+    <link rel="preload" href="/fonts/PICO-8.ttf" as="font" crossOrigin="" />
     <link rel="preload" href="/fonts/Jost.ttf" as="font" crossOrigin="" />
     <title>hdp_</title>
   </Head>

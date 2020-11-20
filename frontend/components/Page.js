@@ -1,4 +1,4 @@
-import Header from '../components/Header';
+import Header from './Header';
 import Meta from '../components/Meta';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
@@ -17,7 +17,7 @@ const StyledPage = styled.div`
 `;
 
 const Inner = styled.div`
-  background: ${props => props.theme.grey};
+  background: ${props => props.theme.black};
   border-radius: 10px;
   margin: 20px auto 0;
   max-width: ${props => props.theme.maxWidth};
@@ -43,6 +43,12 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     src: url('/fonts/Jost.ttf');
   }
+  @font-face {
+    font-family: 'PICO-8';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/PICO-8.ttf');
+  }
   html {
     box-sizing: border-box;
     font-family: 'Jost';
@@ -52,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    background: ${theme.black};
+    background: ${theme.grey};
     font-size: 1.5rem;
     height: 100vh;
     line-height: 1.3;

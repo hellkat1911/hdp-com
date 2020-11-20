@@ -2,6 +2,7 @@ import Router from 'next/router';
 import Link from 'next/link';
 import NProgress from 'nprogress';
 import styled from 'styled-components';
+import Nav from './Nav';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -13,19 +14,19 @@ Router.onRouteChangeError = () => {
   NProgress.done();
 };
 
-const TopNav = styled.nav`
+const StyledHeader = styled.header`
   background: ${props => props.theme.blue};
   box-shadow: ${props => props.theme.bs};
   color: ${props => props.theme.white};
+  display: grid;
   height: 120px;
+  grid-template-columns: auto 1fr;
   padding: 15px 25px;
+  justify-content: space-between;
 `;
 
 const Wordmark = styled.div`
-  position: relative;
-
   h1 {
-    /* color: ${props => props.theme.grey}; */
     font-family: 'Orbitron Black', 'Arial Black', sans-serif;
     font-size: 4rem;
     letter-spacing: 0.3rem;
@@ -43,7 +44,7 @@ const Wordmark = styled.div`
 
   p {
     color: ${props => props.theme.white};
-    font-family: 'Jost', Arial, sans-serif;
+    font-family: 'Orbitron', Arial, sans-serif;
     font-size: 1.5rem;
     letter-spacing: 0.12rem;
     margin: 5px 0 0;
@@ -54,19 +55,22 @@ const Flex = styled.div`
   display: flex;
 `;
 
+const Links = styled.div``;
+
 const Header = () => {
   return (
-    <TopNav>
+    <StyledHeader>
       <Wordmark>
         <Flex>
-          <img src="/images/hellkat-icon.png" />
+          <img src="/images/hellcat-128x128.png" />
           <h1>
             hdp<span>_</span>
           </h1>
         </Flex>
-        <p>hellkat digital production</p>
+        <p>hellkat_ digital production</p>
       </Wordmark>
-    </TopNav>
+      <Nav />
+    </StyledHeader>
   );
 };
 
