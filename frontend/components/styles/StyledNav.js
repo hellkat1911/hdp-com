@@ -6,6 +6,7 @@ const StyledNav = styled.ul`
   justify-self: end;
   margin: 0;
   padding: 0;
+
   a {
     align-items: center;
     border: 0;
@@ -15,7 +16,6 @@ const StyledNav = styled.ul`
     padding: 0 3rem;
     position: relative;
     text-transform: uppercase;
-    background: none;
 
     &:before {
       background: ${props => props.theme.white};

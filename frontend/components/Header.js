@@ -19,16 +19,15 @@ const StyledHeader = styled.header`
   box-shadow: ${props => props.theme.bs};
   color: ${props => props.theme.white};
   display: grid;
-  height: 120px;
   grid-template-columns: auto 1fr;
   justify-content: space-between;
 `;
 
 const Wordmark = styled.div`
-  padding: 15px 25px;
+  padding: 5px 25px 15px;
   h1 {
     font-family: 'Orbitron Black', 'Arial Black', sans-serif;
-    font-size: 4rem;
+    font-size: 8rem;
     letter-spacing: 0.3rem;
     margin: 0;
 
@@ -38,8 +37,12 @@ const Wordmark = styled.div`
   }
 
   img {
+    height: 90px;
+    margin-left: -12px;
     margin-right: 5px;
-    max-width: 50px;
+    margin-top: 2px;
+    max-width: 100%;
+    width: 90px;
   }
 
   p {
@@ -47,7 +50,7 @@ const Wordmark = styled.div`
     font-family: 'Orbitron', Arial, sans-serif;
     font-size: 1.5rem;
     letter-spacing: 0.12rem;
-    margin: 5px 0 0;
+    margin: 2px 0 10px;
   }
 `;
 
