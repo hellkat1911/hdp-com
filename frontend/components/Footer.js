@@ -10,19 +10,26 @@ const StyledFooter = styled.footer`
   position: fixed;
   width: 100%;
 
-  span {
+  p {
     left: 20px;
+    margin: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
+  }
+
+  span {
+    color: ${props => props.theme.lightblue};
   }
 `;
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <span>hellkat_ digital production &copy; 2021</span>
+      <p>
+        hellkat<span>_</span> digital production &copy; 2021
+      </p>
     </StyledFooter>
   );
 };
