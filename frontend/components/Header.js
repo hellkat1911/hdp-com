@@ -15,8 +15,8 @@ Router.onRouteChangeError = () => {
 };
 
 const StyledHeader = styled.header`
-  background: ${props => props.theme.blue};
-  box-shadow: ${props => props.theme.bs};
+  background: ${props => props.theme.lightgrey};
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
   color: ${props => props.theme.white};
   display: grid;
   grid-template-columns: auto 1fr;

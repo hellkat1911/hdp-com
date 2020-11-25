@@ -1,15 +1,19 @@
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Meta from './Meta';
 import Header from './Header';
+import Sidebar from './Sidebar';
 import Footer from './Footer';
 
 const theme = {
-  lightblue: '#00f6ed',
-  blue: '#1282a2',
   white: '#ededed',
+  lightblue: '#00f6ed',
+  blue: '#0077b6',
+  pink: '#f40076',
+  lightgrey: '#48454A',
   grey: '#2e2c2f',
+  darkgrey: '#1F1E1F',
   black: '#110b11',
-  maxWidth: '1200px',
+  maxWidth: '1515px',
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
 };
 
@@ -47,7 +51,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    background: ${theme.black};
+    background: ${theme.grey};
     color: ${props => props.theme.white};
     font-family: 'Jost', sans-serif;
     font-size: 1.8rem;
@@ -57,10 +61,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   h1 {
-    font-family: 'PICO-8', sans-serif;
+    font-family: 'Orbitron Black', sans-serif;
   }
   a {
     color: ${theme.lightblue};
+    outline: none;
     text-decoration: none;
   }
 `;
@@ -70,11 +75,16 @@ const StyledPage = styled.div`
 `;
 
 const Inner = styled.div`
-  background: ${props => props.theme.grey};
-  border-radius: 10px;
   margin: 50px auto 0;
   max-width: ${props => props.theme.maxWidth};
-  padding: 2rem;
+  padding-left: 315px;
+  padding-right: 15px;
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 `;
 
 const Page = props => {
@@ -83,6 +93,7 @@ const Page = props => {
       <StyledPage>
         <Meta />
         <Header />
+        <Sidebar />
         <Inner>{props.children}</Inner>
         <Footer />
       </StyledPage>

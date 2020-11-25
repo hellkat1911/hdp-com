@@ -21,8 +21,11 @@ const StyledHome = styled.main`
   }
   hr {
     background: ${props => props.theme.lightblue};
-    color: ${props => props.theme.blue};
-    height: 5px;
+    border: none;
+    height: 2px;
+  }
+  ul li::marker {
+    color: ${props => props.theme.lightblue};
   }
 `;
 
@@ -38,10 +41,9 @@ const Home = () => {
         Welcome to hellkat<span>_</span> digital production!
       </p>
       <p>
-        I'm a U.S.-based full-stack developer who's passionate about web
-        development and information security. While currently under
-        construction, this site will soon be a destination for some awesome
-        content, including:
+        I'm a U.S.-based full-stack developer who's passionate about the web and
+        information security. While currently under construction, this site will
+        soon be a destination for some awesome content, including:
       </p>
       <ul>
         <li>highlights from my latest projects and clients</li>

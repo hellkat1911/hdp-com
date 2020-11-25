@@ -1,26 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import GithubIcon from '@material-ui/icons/Github';
 
 const StyledFooter = styled.footer`
-  background: ${props => props.theme.grey};
+  align-items: center;
+  background: ${props => props.theme.black};
   bottom: 0;
+  display: flex;
   font-size: 1.4rem;
-  height: 75px;
+  height: 60px;
+  justify-content: space-between;
   padding: 15px 20px;
   position: fixed;
   width: 100%;
 
   p {
-    left: 20px;
     margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
   }
 
   span {
     color: ${props => props.theme.lightblue};
+  }
+
+  a {
+    color: ${props => props.theme.white};
+    margin: 0 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s linear;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 `;
 
@@ -30,6 +41,22 @@ const Footer = () => {
       <p>
         hellkat<span>_</span> digital production &copy; 2021
       </p>
+      <div>
+        <a
+          href="https://twitter.com/hellkat_"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <TwitterIcon fontSize="large" />
+        </a>
+        <a
+          href="https://github.com/hellkat1911/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GithubIcon fontSize="large" />
+        </a>
+      </div>
     </StyledFooter>
   );
 };
