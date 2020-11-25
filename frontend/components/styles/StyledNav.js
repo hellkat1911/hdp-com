@@ -16,6 +16,11 @@ const StyledNav = styled.ul`
     padding: 0 3rem;
     position: relative;
     text-transform: uppercase;
+    transition: color 0.25s linear;
+
+    &:hover {
+      color: ${props => props.theme.lightblue};
+    }
 
     &:before {
       background: ${props => props.theme.white};

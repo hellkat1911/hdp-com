@@ -8,13 +8,13 @@ const Nav = () => {
       <Link href="/about">
         <a>About</a>
       </Link>
-      <Link href="/test-1">
+      <Link href="/">
         <a>Test 1</a>
       </Link>
-      <Link href="/test-2">
+      <Link href="/">
         <a>Test 2</a>
       </Link>
-      <Link href="/test-3">
+      <Link href="/">
         <a>Test 3</a>
       </Link>
     </StyledNav>
