@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import GithubIcon from '@material-ui/icons/Github';
+// import GithubIcon from '@material-ui/icons/Github';
 
 const StyledFooter = styled.footer`
   align-items: center;
