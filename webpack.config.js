@@ -1,6 +1,6 @@
 module.exports = {
   resolveLoader: {
-    fallback: '/node_modules',
+    fallback: process.env.NODE_PATH,
   },
 };
 L;
