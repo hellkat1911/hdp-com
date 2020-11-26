@@ -77,11 +77,13 @@ const StyledPage = styled.div`
 const Inner = styled.div`
   margin: 50px auto 0;
   max-width: ${props => props.theme.maxWidth};
+  min-height: calc(100vh - 214px);
   padding-left: 315px;
   padding-right: 15px;
 
   @media (max-width: 767px) {
     max-width: 100%;
+    min-height: calc(100vh - 197px);
     padding-left: 30px;
     padding-right: 30px;
   }

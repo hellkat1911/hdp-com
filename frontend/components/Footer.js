@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
   height: 60px;
   justify-content: space-between;
   padding: 15px 20px;
-  position: fixed;
+  position: relative;
   width: 100%;
 
   p {

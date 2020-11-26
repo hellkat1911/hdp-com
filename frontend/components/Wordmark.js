@@ -3,17 +3,25 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 const StyledContainer = styled.div`
-  padding: 10px 30px 25px;
+  padding: 10px 30px 22px;
   position: relative;
+
+  @media (max-width: 767px) {
+    padding: 5px 30px 22px;
+  }
 
   h1 {
     color: ${props => props.theme.white};
     font-family: 'Orbitron Black', sans-serif;
-    font-size: 7rem;
+    font-size: 6rem;
     letter-spacing: 0.3rem;
     line-height: 1.2;
     margin: 0;
     text-shadow: -2px 2px 4px ${props => props.theme.black};
+
+    @media (max-width: 767px) {
+      display: none;
+    }
 
     span {
       color: ${props => props.theme.lightblue};
@@ -21,12 +29,18 @@ const StyledContainer = styled.div`
   }
 
   img {
-    height: 60px;
+    height: 50px;
     margin-right: 10px;
     max-width: 100%;
     position: relative;
-    top: 12px;
-    width: 60px;
+    top: 10px;
+    width: 50px;
+
+    @media (max-width: 767px) {
+      height: 60px;
+      top: 5px;
+      width: 60px;
+    }
   }
 
   p {
