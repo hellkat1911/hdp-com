@@ -7,7 +7,9 @@ const StyledSidebar = styled.div`
   height: 100%;
   left: 0;
   position: fixed;
+  top: 0;
   width: 300px;
+  z-index: 1;
 
   @media (max-width: 767px) {
     display: none;

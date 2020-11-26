@@ -14,6 +14,7 @@ const StyledFooter = styled.footer`
   padding: 15px 20px;
   position: relative;
   width: 100%;
+  z-index: 2;
 
   p {
     margin: 0;

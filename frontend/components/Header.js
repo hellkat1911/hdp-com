@@ -21,6 +21,8 @@ const StyledHeader = styled.header`
   display: grid;
   grid-template-columns: auto 1fr;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 `;
 
 const StyledIcon = styled.div`

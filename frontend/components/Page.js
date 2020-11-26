@@ -78,6 +78,7 @@ const Inner = styled.div`
   margin: 50px auto 0;
   max-width: ${props => props.theme.maxWidth};
   min-height: calc(100vh - 214px);
+  padding-bottom: 60px;
   padding-left: 315px;
   padding-right: 15px;
 
