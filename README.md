@@ -1,6 +1,6 @@
-# Hellkat Digital Production
+# hellkat\_ digital production
 
-My personal portfolio / playground / home page for HDP.
+My personal site! Currently under construction, but will feature a variety of content focused on web development and infosec, including blog posts, how-to's, reviews of new tools, and discussion of trending topics in the space.
 
 ## Stack
 
