@@ -44,7 +44,7 @@ const Header = () => {
         <a>
           <StyledIcon
             src="/images/hellcat-128x128.png"
-            alt="hellkat_ digital production"
+            alt="hellkat_ digital production icon"
           />
         </a>
       </Link>

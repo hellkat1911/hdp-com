@@ -6,7 +6,6 @@ import {
   Code as CodeIcon,
   Headset as HeadsetIcon,
 } from '@material-ui/icons';
-// import ComputerIcon from '@material-ui/icons/Computer';
 import StyledMarquee from '../components/styles/StyledMarquee';
 import StyledMain from '../components/styles/StyledMain';
 
