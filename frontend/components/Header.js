@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import styled from 'styled-components';
-import Wordmark from './Wordmark';
 import Nav from './Nav';
 
 Router.onRouteChangeStart = () => {
@@ -25,14 +25,29 @@ const StyledHeader = styled.header`
   z-index: 2;
 `;
 
-const StyledIcon = styled.div`
-  padding: 30px 20px;
+const StyledIcon = styled.img`
+  height: 50px;
+  margin: 20px 30px;
+  transform: none;
+  transition: transform 0.3s ease-in-out;
+  width: 50px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const Header = () => {
   return (
     <StyledHeader>
-      <Wordmark />
+      <Link href="/">
+        <a>
+          <StyledIcon
+            src="/images/hellcat-128x128.png"
+            alt="hellkat_ digital production"
+          />
+        </a>
+      </Link>
       <Nav />
     </StyledHeader>
   );

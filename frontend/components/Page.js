@@ -55,7 +55,6 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.white};
     font-family: 'Jost', sans-serif;
     font-size: 1.8rem;
-    height: 100vh;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -72,19 +71,19 @@ const GlobalStyle = createGlobalStyle`
 
 const StyledPage = styled.div`
   color: ${props => props.theme.white};
+  min-height: 100vh;
+  position: relative;
 `;
 
 const Inner = styled.div`
   margin: 50px auto 0;
   max-width: ${props => props.theme.maxWidth};
-  min-height: calc(100vh - 214px);
   padding-bottom: 60px;
   padding-left: 315px;
   padding-right: 15px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 974px) {
     max-width: 100%;
-    min-height: calc(100vh - 197px);
     padding-left: 30px;
     padding-right: 30px;
   }

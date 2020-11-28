@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import GithubIcon from '@material-ui/icons/GitHub';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const StyledFooter = styled.footer`
   align-items: center;
@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
   height: 60px;
   justify-content: space-between;
   padding: 15px 20px;
-  position: relative;
+  position: absolute;
   width: 100%;
   z-index: 2;
 
@@ -27,7 +27,7 @@ const StyledFooter = styled.footer`
   a {
     color: ${props => props.theme.white};
     margin: 0 10px;
-    opacity: 0.7;
+    opacity: 0.6;
     transition: opacity 0.3s linear;
 
     &:hover {
@@ -55,7 +55,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GithubIcon fontSize="large" />
+          <GitHubIcon fontSize="large" />
         </a>
       </div>
     </StyledFooter>
