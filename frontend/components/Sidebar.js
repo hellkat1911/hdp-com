@@ -4,12 +4,11 @@ import styled from 'styled-components';
 const StyledSidebar = styled.div`
   background: ${props => props.theme.darkgrey};
   box-shadow: 12px 0 24px 0 rgba(0, 0, 0, 0.15);
-  height: calc(100% - 60px);
+  height: 100%;
   left: 0;
-  margin-bottom: 60px;
   overflow-y: scroll;
   padding: 100px 30px 0;
-  position: fixed;
+  position: absolute;
   text-align: center;
   top: 0;
   width: 300px;
