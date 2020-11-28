@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import Router from 'next/router';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { Menu, MenuItem, Fade } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import {
+  Menu as MenuIcon,
+  Home as HomeIcon,
+  InfoOutlined as InfoIcon,
+  Email as EmailIcon,
+} from '@material-ui/icons';
 import StyledNav from './styles/StyledNav';
 import StyledNavMobile from './styles/StyledNavMobile';
 
@@ -27,10 +32,15 @@ const StyledMenuItem = styled(MenuItem)`
       text-align: center;
       width: 100%;
     }
+
+    svg {
+      margin-right: 5px;
+    }
   }
 `;
 
 const CustomMobileNav = () => {
+  const router = useRouter();
   const [elem, setElem] = useState(null);
 
   const handleOpen = e => {
@@ -39,7 +49,7 @@ const CustomMobileNav = () => {
 
   const handleLink = link => {
     setElem(null);
-    Router.push(link);
+    router.push(link);
   };
 
   const handleClose = () => {
@@ -74,7 +84,16 @@ const CustomMobileNav = () => {
         open={!!elem}
         onClose={handleClose}
       >
+        <StyledMenuItem onClick={() => handleLink('/')}>
+          <HomeIcon fontSize="large" />
+          Home
+        </StyledMenuItem>
+        <StyledMenuItem onClick={() => handleLink('/about')}>
+          <InfoIcon fontSize="large" />
+          About
+        </StyledMenuItem>
         <StyledMenuItem onClick={() => handleLink('/contact')}>
+          <EmailIcon fontSize="large" />
           Contact
         </StyledMenuItem>
       </StyledMenu>
@@ -87,6 +106,11 @@ const Nav = () => {
     <>
       <StyledNav>
         <ul>
+          <li>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+          </li>
           <li>
             <Link href="/contact">
               <a>Contact</a>

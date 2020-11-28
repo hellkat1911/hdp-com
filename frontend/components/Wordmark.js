@@ -14,11 +14,11 @@ const Wordmark = () => {
       <div>
         <img
           src="/images/hellcat-128x128.png"
-          alt="hellkat_ digital production"
+          alt="hdp_ skull with horns icon"
           onClick={handleClick}
         />
         <p>{msg}</p>
-        <h1>
+        <h1 className="headline">
           hdp<span>_</span>
         </h1>
       </div>

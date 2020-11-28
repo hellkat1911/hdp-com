@@ -1,60 +1,52 @@
 import styled from 'styled-components';
+import { Grid } from '@material-ui/core';
 import Wordmark from '../components/Wordmark';
+import StyledMarquee from '../components/styles/StyledMarquee';
+import StyledMain from '../components/styles/StyledMain';
 
-const StyledMarquee = styled.div`
-  align-items: center;
-  background: rgba(244, 0, 118, 0.77);
-  border: 4px solid ${props => props.theme.white};
-  border-radius: 5px;
-  color: ${props => props.theme.white};
-  display: flex;
-  flex-direction: column;
-  font-family: 'Orbitron Black', sans-serif;
-  justify-content: space-between;
-  min-height: 300px;
-  padding: 3rem;
-
-  @media (max-width: 699px) {
-    padding-top: 6rem;
-  }
-
-  @media (max-width: 519px) {
-    justify-content: center;
-  }
-
-  h2 {
-    margin-top: 0;
-    text-align: center;
-
-    span {
-      color: ${props => props.theme.lightblue};
-    }
-
-    @media (max-width: 519px) {
-      font-size: 2.2rem;
-      margin-top: 25px;
-    }
+const StyledGridContainer = styled(Grid)`
+  @media (max-width: 1279px) {
+    flex-direction: column-reverse;
   }
 `;
 
-const StyledMain = styled.main`
-  font-size: 2.2rem;
-  padding-top: 50px;
+const StyledGridItem = styled(Grid)`
+  width: 100%;
+`;
 
-  & ul {
-    @media (max-width: 519px) {
-      padding-left: 20px;
+const StyledImageContainer = styled.div`
+  position: relative;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    transform: scaleX(-1) rotate(5deg);
+
+    &:nth-of-type(2) {
+      animation: rock 2s infinite;
+      position: absolute;
+      left: calc(50% - 130px);
+      top: 45px;
+      width: 60px;
+
+      @keyframes rock {
+        0% {
+          transform: rotate(-10deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        100% {
+          transform: rotate(-10deg);
+        }
+      }
+
+      @media (max-width: 499px) {
+        left: 17%;
+        top: 18%;
+        width: 15%;
+      }
     }
-  }
-
-  & li::marker {
-    color: ${props => props.theme.lightblue};
-  }
-
-  @media (max-width: 519px) {
-    font-size: 1.8rem;
-    padding-bottom: 20px;
-    padding-top: 20px;
   }
 `;
 
@@ -68,21 +60,33 @@ const Home = () => {
         </h2>
       </StyledMarquee>
       <StyledMain>
-        <p>
-          I'm a U.S.-based full-stack developer who's passionate about the web
-          and information security. While currently under construction, this
-          site will soon be a destination for some awesome content, including:
-        </p>
-        <ul>
-          <li>highlights from my latest projects and clients</li>
-          <li>reviews of tools, packages, and frameworks</li>
-          <li>
-            how-to's for a variety of web dev topics, including React, Node,
-            AWS, and Devops
-          </li>
-          <li>updates on my infosec journey, pwns, and certs</li>
-        </ul>
-        <p>Thanks for visiting, and check back soon!</p>
+        <StyledGridContainer container spacing={0} alignItems="center">
+          <StyledGridItem item md={12} lg={6}>
+            <StyledImageContainer>
+              <img src="/images/normal-cat.png" alt="Squishy cat" />
+              <img src="/images/skull-128x128.png" alt="Spooky skull" />
+            </StyledImageContainer>
+          </StyledGridItem>
+          <Grid item md={12} lg={6}>
+            <p>
+              I'm a U.S.-based full-stack developer who's passionate about the
+              web and information security. While currently under construction,
+              this site will soon be a destination for some awesome content,
+              including:
+            </p>
+            <ul>
+              <li>highlights from my latest projects and clients</li>
+              <li>reviews of tools, packages, and frameworks</li>
+              <li>
+                how-to's for a variety of web dev topics, including React, Node,
+                AWS, and Devops
+              </li>
+              <li>updates on my infosec journey, pwns, and certs</li>
+              <li>thirst traps of my dope gaming PC</li>
+            </ul>
+            <p>Thanks for visiting, and check back soon!</p>
+          </Grid>
+        </StyledGridContainer>
       </StyledMain>
     </>
   );

@@ -13,7 +13,10 @@ const theme = {
   grey: '#2e2c2f',
   darkgrey: '#1F1E1F',
   black: '#110b11',
-  maxWidth: '1515px',
+  bgPink: 'rgba(244, 0, 118, 0.77)',
+  border: '4px solid #ededed',
+  borderRadius: '5px',
+  maxWidth: '151.5rem',
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
 };
 
@@ -72,20 +75,21 @@ const GlobalStyle = createGlobalStyle`
 const StyledPage = styled.div`
   color: ${props => props.theme.white};
   min-height: 100vh;
+  padding-bottom: 3rem;
   position: relative;
 `;
 
 const Inner = styled.div`
   margin: 50px auto 0;
   max-width: ${props => props.theme.maxWidth};
-  padding-bottom: 60px;
-  padding-left: 315px;
-  padding-right: 15px;
+  padding-bottom: 6rem;
+  padding-left: 31.5rem;
+  padding-right: 1.5rem;
 
   @media (max-width: 974px) {
     max-width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 `;
 

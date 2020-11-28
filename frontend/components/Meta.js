@@ -29,7 +29,7 @@ const Meta = () => (
     <link rel="preload" href="/fonts/Orbitron.ttf" as="font" crossOrigin="" />
     <link rel="preload" href="/fonts/PICO-8.ttf" as="font" crossOrigin="" />
     <link rel="preload" href="/fonts/Jost.ttf" as="font" crossOrigin="" />
-    <title>hellkat_ digital production</title>
+    <title>hellkat_ digital production &ndash; web tech for the masses!</title>
   </Head>
 );
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledWordmark = styled.div`
-  h1 {
+  h1.headline {
     color: ${props => props.theme.white};
     font-family: 'Orbitron Black', sans-serif;
     font-size: 10rem;
@@ -12,6 +12,7 @@ const StyledWordmark = styled.div`
 
     span {
       color: ${props => props.theme.lightblue};
+      text-shadow: inherit;
     }
 
     @media (max-width: 519px) {
@@ -43,7 +44,7 @@ const StyledWordmark = styled.div`
   p {
     animation: blink 2.5s infinite step-end;
     background: ${props => props.theme.white};
-    border: 2px solid ${props => props.theme.black};
+    border: 3px solid ${props => props.theme.black};
     color: ${props => props.theme.black};
     left: 300px;
     min-width: 160px;
@@ -79,7 +80,7 @@ const StyledWordmark = styled.div`
 
     &::before {
       background: ${props => props.theme.white};
-      border: 2px solid ${props => props.theme.black};
+      border: 3px solid ${props => props.theme.black};
       border-right: none;
       border-top: none;
       bottom: 12px;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import EmailIcon from '@material-ui/icons/Email';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
@@ -44,9 +45,16 @@ const Footer = () => {
       </p>
       <div>
         <a
+          href="mailto:boxcutter14@gmail.com"
+          aria-label="Send an email to hdp_"
+        >
+          <EmailIcon fontSize="large" />
+        </a>
+        <a
           href="https://twitter.com/hellkat_"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Follow hdp_ on Twitter"
         >
           <TwitterIcon fontSize="large" />
         </a>
@@ -54,6 +62,7 @@ const Footer = () => {
           href="https://github.com/hellkat1911/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Check out hdp_ on GitHub"
         >
           <GitHubIcon fontSize="large" />
         </a>
