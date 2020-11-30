@@ -7,6 +7,7 @@ import Footer from './Footer';
 const theme = {
   white: '#ededed',
   lightblue: '#00f6ed',
+  darklightblue: '#00A39E',
   blue: '#0077b6',
   pink: '#f40076',
   lightgrey: '#48454A',
@@ -45,14 +46,17 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     src: url('/fonts/PICO-8.ttf');
   }
+
   html {
     box-sizing: border-box;
     font-family: 'Jost';
     font-size: 10px;
   }
+
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
   body {
     background: ${theme.grey};
     color: ${props => props.theme.white};
@@ -62,14 +66,53 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
   h1 {
     font-family: 'Orbitron Black', sans-serif;
   }
+
   a {
-    color: ${theme.lightblue};
+    color: ${props => props.theme.white};
     outline: none;
     text-decoration: none;
   }
+
+  a.textlink {
+    color: ${theme.lightblue};
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.4s linear;
+
+      &:after {
+        background: ${theme.pink};
+        content: '';
+        height: 2px;
+        left: 50%;
+        margin-top: 3rem;
+        position: absolute;
+        transform: translateX(-50%);
+        transition: width 0.4s;
+        transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
+        width: 0;
+      }
+
+      &:hover,
+      &:focus {
+        color: ${theme.darklightblue};
+        outline: none;
+
+        &:after {
+          width: 100%;
+        }
+      }
+  }
+
+  li {
+      &::marker {
+        color: ${props => props.theme.pink};
+      }
+    }
 `;
 
 const StyledPage = styled.div`

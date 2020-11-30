@@ -5,6 +5,7 @@ import StyledMarquee from '../components/styles/StyledMarquee';
 import StyledMain from '../components/styles/StyledMain';
 
 const StyledGridContainer = styled(Grid)`
+  overflow-x: hidden;
   @media (max-width: 1279px) {
     flex-direction: column-reverse;
   }

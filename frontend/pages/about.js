@@ -115,9 +115,36 @@ const About = () => {
               Podcasts
             </h5>
             <ul>
-              <li>Nerd Canon</li>
-              <li>Darknet Diaries</li>
-              <li>Syntax.fm</li>
+              <li>
+                <a
+                  className="textlink"
+                  href="http://nerdcanon.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Nerd Canon
+                </a>
+              </li>
+              <li>
+                <a
+                  className="textlink"
+                  href="https://darknetdiaries.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Darknet Diaries
+                </a>
+              </li>
+              <li>
+                <a
+                  className="textlink"
+                  href="https://syntax.fm/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Syntax.fm
+                </a>
+              </li>
             </ul>
           </Grid>
         </Grid>

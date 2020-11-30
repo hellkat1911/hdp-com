@@ -29,10 +29,21 @@ const StyledFooter = styled.footer`
     color: ${props => props.theme.white};
     margin: 0 10px;
     opacity: 0.6;
-    transition: opacity 0.3s linear;
+    transition: opacity 0.3s;
 
-    &:hover {
+    svg {
+      transform: none;
+      transition: transform 0.3s;
+    }
+
+    &:hover,
+    &:focus {
       opacity: 1;
+      transform: scale(1.2);
+
+      & svg {
+        transform: scale(1.1);
+      }
     }
   }
 `;

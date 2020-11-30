@@ -6,7 +6,7 @@ const StyledMain = styled.main`
   border-radius: ${props => props.theme.borderRadius};
   font-size: 2.2rem;
   margin-top: 20px;
-  padding: 50px 30px 20px;
+  padding: 20px 30px 20px;
 
   h3 {
     font-family: 'Orbitron Black', sans-serif;
@@ -32,10 +32,6 @@ const StyledMain = styled.main`
 
     li {
       margin-bottom: 5px;
-
-      &::marker {
-        color: ${props => props.theme.lightblue};
-      }
     }
   }
 
